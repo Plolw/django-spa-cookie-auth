@@ -14,9 +14,9 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount = () => {
-    this.getSession();
-  }
+  //componentDidMount = () => {
+  //  this.getSession();
+  //}
 
   getCSRF = () => {
     fetch("http://localhost:8000/api/csrf/", {
@@ -32,7 +32,7 @@ class App extends React.Component {
     });
   }
 
-  getSession = () => {
+  /*getSession = () => {
     fetch("http://localhost:8000/api/session/", {
       credentials: "include",
     })
@@ -49,7 +49,7 @@ class App extends React.Component {
     .catch((err) => {
       console.log(err);
     });
-  }
+  }*/
 
   whoami = () => {
     fetch("http://localhost:8000/api/whoami/", {
