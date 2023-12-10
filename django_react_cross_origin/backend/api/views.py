@@ -22,7 +22,6 @@ class get_csrf(APIView):
 class Login(APIView):
     permission_classes = (permissions.AllowAny,)
 
-    @csrf_protect
     def post(self, request):
         data = json.loads(request.body)
         username = data.get('username')

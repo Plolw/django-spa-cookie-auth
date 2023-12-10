@@ -19,7 +19,7 @@ class App extends React.Component {
   //}
 
   getCSRF = () => {
-    fetch("http://localhost:8000/api/csrf/", {
+    fetch("http://127.0.0.1:8000/api/csrf/", {
       credentials: "include",
     })
     .then((res) => {
@@ -85,7 +85,7 @@ class App extends React.Component {
 
   login = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8000/api/login/", {
+    fetch("http://127.0.0.1:8000/api/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
